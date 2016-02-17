@@ -25,6 +25,11 @@ class PostsController < ApplicationController
     end
     
     def update
+        if @post.update(params[:post].permit(:title, :location, :you_are, :looking_for, :company, :description, :requirements, :product_cycle, :salary, :equity ))
+			redirect_to @post
+		else
+			render 'edit'
+		end
     end
     
     def destroy
@@ -33,7 +38,7 @@ class PostsController < ApplicationController
     private
     
     def post_params
-        params.require(:post).permit(:title, :location, :company, :description, :requirements, :product_cycle, :salary, :equity )
+        params.require(:post).permit(:title, :location, :you_are, :looking_for, :company, :description, :requirements, :product_cycle, :salary, :equity )
     end
     
     def find_post
