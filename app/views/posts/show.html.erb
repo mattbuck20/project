@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col m6 offset-m3 center">
+    <h3 class="title">
+    	<%= @post.title %>
+    </h3>
+    
+    <p class="date">
+    	Submitted <%= time_ago_in_words(@post.created_at) %> Ago
+    </p>
+    
+    <p class="location">
+    	<%= @post.location %>
+    </p>
+    
+    <p class="description">
+    	<%= @post.description %>
+    </p>
+    
+    <p class="requirements">
+    	<%= @post.requirements %>
+    </p>
+    
+    <p class="salary">
+    	<%= @post.salary %>
+    </p>
+    
+    <p class="equity">
+    	<%= @post.equity %>
+    </p>
+    
+    <p class="product_cycle">
+    	<%= @post.product_cycle %>
+    </p>
+    
+  </div>
+</div>

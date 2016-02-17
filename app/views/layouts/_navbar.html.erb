@@ -21,11 +21,12 @@
 			      <a href="#!" class="brand-logo">CofounderSpace</a>
 			      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
 			      <ul class="right hide-on-med-and-down">
-			        <li><a href="#!">All Posts</a></li>
+			           <li><%= link_to "All Posts", root_path %></li>
 			        <% if (!user_signed_in?) %>
 				        <li><%= link_to "Sign Up", new_user_registration_path %></li>
 				        <li><%= link_to "Log in", new_user_session_path %></li>
 				   <% else %>
+				     <li><%= link_to "New Post", new_post_path %></li>
 			       	 <li><a class="dropdown-button valign-wrapper" href="#!" data-activates="dropdown1">
 			       	 	<%= current_user.username %><i class="mdi-navigation-arrow-drop-down right"></i></a>
 			       	 </li>
@@ -35,8 +36,9 @@
 			     		 <li><a href="#!">All Posts</a></li>
 			     		 <% if (!user_signed_in?) %>
 		       		        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-				        	 <li><%= link_to "Log in", new_user_session_path %></li>
+				        	<li><%= link_to "Log in", new_user_session_path %></li>
 				        <% else %>
+				            <li><%= link_to "New Post", new_post_path %></li>
 				        	<li><a class="dropdown-button valign-wrapper" href="#!" data-activates="dropdown2">
 				        		<%= current_user.username %><i class="mdi-navigation-arrow-drop-down right"></i></a>
 				        	</li>

@@ -17,14 +17,14 @@ ActiveRecord::Schema.define(version: 20160216190935) do
     t.string   "title"
     t.string   "you_are"
     t.string   "looking_for"
-    t.string   "locaction"
+    t.string   "location"
     t.string   "company"
     t.string   "industry"
     t.text     "description"
     t.text     "requirements"
-    t.string   "prodect_cycle"
-    t.integer  "salary"
-    t.integer  "equity"
+    t.string   "product_cycle"
+    t.string   "salary"
+    t.string   "equity"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
   end

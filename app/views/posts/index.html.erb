@@ -1,0 +1,12 @@
+<h5>Posts</h5>
+  <% @posts.each do |post| %>
+    <div class="divider"></div>
+      <div class="section">
+      <div class="post_wrapper">
+        <h5 class="title"><%= link_to post.title, post %></h5>
+        <%= post.location %>
+        <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+      </div>
+    </div>
+  <% end %>
+
